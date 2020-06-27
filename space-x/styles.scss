@@ -1,0 +1,155 @@
+
+$backgrondPATH:"https://wallpapertag.com/wallpaper/full/f/6/6/246918-spacex-wallpaper-1920x1080-retina.jpg";
+$transitionTime: 450ms;
+
+main{
+   background: url($backgrondPATH);
+   background-size: cover;
+   background-position: center;
+   filter: brightness(60%);
+}
+
+
+/* ver bien lo de las animaciones e intentar generalizar las clases */
+
+.text__general{
+
+   font-size: medium;
+   transition: $transitionTime;
+   color: white;
+}
+
+
+.animation{
+
+   transition: $transitionTime;
+}
+
+ .animation a{
+
+   @extend .animation;
+   opacity: 0.9;
+}
+
+.animation a:hover{
+
+   opacity: 1;
+   font-size:large;
+   text-decoration: none;
+   color: white;
+}
+ 
+
+#header{
+   
+   background-color: transparent !important;
+}
+
+#header a{
+
+   padding: 4vh 4vh;
+}
+
+.login{
+
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   flex-direction: column;
+   margin-top: 0%;
+   margin-bottom: 0%;
+}
+
+
+.login__container--general{
+
+   padding: 4% 2% ;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border: solid white 2px;
+   border-radius: 50px;
+   background-color: rgba(0, 0, 0, 0.5);
+   margin: 14% 10%;
+   color: white;
+}
+.login__container{
+
+   @extend .login__container--general;   
+   width:30%;
+   height: 65%;
+   
+}
+@media only screen and (max-width: 600px){
+   .login__container{
+      @extend .login__container--general;   
+      width:70%;
+      height: 75%;  
+   }
+}
+.login__container h6{
+
+   text-align: center;
+}
+
+.login__container--form{
+
+   width: 70%;
+   height: 90%; 
+}
+
+.login__container--form div{
+
+   width: 100%;
+   height: 100%;
+   display: flex;
+   margin: 8% 0%;
+   flex-direction: column;
+}
+
+.login__container--form a{
+
+   color: white;
+   font-size: small;
+   text-align: center;
+}
+
+.login__container--form input{
+
+   background-color: transparent;
+   width: 100%;
+   height: 100% ;
+   border: solid 2px white;
+   border-radius: 10px;
+   text-align: center;
+   color: white;
+   outline: none;
+}
+
+.login__container--social{
+
+   justify-items: center;
+}
+
+.login__container--social a{
+
+   color: white;
+   align-items: center;
+   text-align: center;
+}
+
+#footer a{
+
+   font-size: medium;
+   transition: $transitionTime;
+   color: white;
+   opacity: 0.5;
+}
+
+#footer a:hover{
+
+   text-decoration-line:none;
+   font-size:large;
+   opacity:1;
+
+}
